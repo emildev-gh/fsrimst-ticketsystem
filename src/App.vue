@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-red-500">Moin Meister!</div>
+  <RouterView />
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import { RouterView } from 'vue-router';
+</script>
