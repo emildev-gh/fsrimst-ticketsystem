@@ -1,1 +1,39 @@
 @import 'tailwindcss';
+
+@theme {
+  /* ── Basis ── */
+  --color-white: #ffffff;
+  --color-off-white: #fafaf8;
+
+  /* ── Gold (Primärfarbe) ── */
+  --color-gold: #b8965a;
+  --color-gold-light: #dfc99a;
+  --color-gold-dark: #8a6a2a;
+
+  /* ── Text ── */
+  --color-text: #1a1610;
+  --color-text-muted: #8c8070;
+
+  /* ── Border ── */
+  --color-border: #ede8e0;
+
+  /* ── Botanische Akzentfarben ── */
+  --color-rose: #d4847a;
+  --color-rose-light: #e09e96;
+  --color-sage: #7a9e7e;
+  --color-sage-light: #8fb594;
+  --color-lavender: #9e8fb5;
+  --color-lavender-light: #b5a8c8;
+  --color-sun: #c9a84c;
+  --color-sun-light: #e8c96a;
+
+  /* ── Externe Dienste ── */
+  --color-stripe: #635bff;
+
+  /* ── Typografie ── */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+
+  /* ── Schatten ── */
+  --shadow-card: 0 6px 24px rgb(184 150 90 / 0.1);
+}
