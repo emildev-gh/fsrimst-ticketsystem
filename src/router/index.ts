@@ -3,6 +3,7 @@ import type { RouteRecordRaw } from 'vue-router'
 
 import LandingPage from '@/views/LandingPage.vue'
 import ReservationPage from '@/views/ReservationPage.vue'
+import TestPage from '@/views/TestPage.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -13,6 +14,10 @@ const routes: RouteRecordRaw[] = [
     path: '/reservation',
     component: ReservationPage
   },
+  {
+    path: '/test',
+    component: TestPage
+  }
 ]
 
 const router = createRouter({
