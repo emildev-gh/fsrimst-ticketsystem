@@ -21,12 +21,50 @@
       </div>
       <Divider mode="flower" />
     </template>
-    Landing Page
+
+    <section class="grid w-full max-w-[700px] grid-cols-1 gap-3.5 px-8 sm:grid-cols-2">
+      <OrderItem
+        ticket-key="seat"
+        variant="gold"
+        type-label="15 €"
+        title="Sitzplatz"
+        price="15 €"
+        description="reservierter Wunschplatz"
+        :features="['Garantierter Sitzplatz', 'Wunschplatz wählbar', 'Ticket per E-Mail']"
+        action-label="Platz wählen"
+        @select="handleOrderSelection"
+      />
+
+      <OrderItem
+        ticket-key="free"
+        variant="free"
+        type-label="Kostenlos"
+        title="Eintritt"
+        price="0 €"
+        description="freier Platz vor Ort"
+        :features="[
+          'Zugang zum Event der Hochschule',
+          'Freie Sitzplatzwahl vor Ort',
+          'Sektempfang, Vorträge der Hochschule und anschließende Zeugnisübergabe'
+        ]"
+        action-label="Reservieren"
+        @select="handleOrderSelection"
+      />
+    </section>
   </Layout>
 </template>
 
 <script lang="ts" setup>
+  import { useRouter } from 'vue-router'
+
+  import OrderItem from '@/components/OrderItem.vue'
   import Layout from '@/components/layout/Layout.vue'
   import Divider from '@/components/utility/Divider.vue'
   import { strings } from '@/assets/strings'
+
+  const router = useRouter()
+
+  const handleOrderSelection = (ticketKey: string) => {
+    void router.push({ path: '/reservation', query: { ticket: ticketKey } })
+  }
 </script>
