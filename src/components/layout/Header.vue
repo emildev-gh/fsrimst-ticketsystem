@@ -1,5 +1,5 @@
 <template>
-  <header class="flex flex-col items-center">
+  <header class="my-10 flex flex-col items-center">
     <Divider />
     <slot />
   </header>
