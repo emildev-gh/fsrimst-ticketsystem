@@ -1,6 +1,6 @@
 <template>
   <div class="flex min-h-screen flex-col items-center">
-    <div class="w-[90%] max-w-[600px]">
+    <div class="w-[90%] max-w-[720px]">
       <Header>
         <slot name="header" />
       </Header>
