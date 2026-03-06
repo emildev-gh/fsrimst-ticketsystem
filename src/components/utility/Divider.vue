@@ -44,6 +44,7 @@
         <ellipse cx="10" cy="3" rx="2.5" ry="4" fill="#e09e96" opacity="0.7" transform="rotate(288 10 10)" />
       </svg>
     </div>
+    <div v-else-if="mode === 'none'"></div>
     <div :class="lineClasses"></div>
   </div>
 </template>
@@ -51,10 +52,10 @@
 <script lang="ts" setup>
   withDefaults(
     defineProps<{
-      mode?: 'dot' | 'flower'
+      mode?: 'dot' | 'flower' | 'none'
     }>(),
     {
-      mode: 'dot'
+      mode: 'none'
     }
   )
 

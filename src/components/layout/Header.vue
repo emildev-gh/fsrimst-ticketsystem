@@ -1,6 +1,6 @@
 <template>
   <header class="my-10 flex flex-col items-center">
-    <Divider />
+    <Divider mode="dot" />
     <slot />
   </header>
 </template>
